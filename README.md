@@ -113,3 +113,6 @@ http://127.0.0.1:8000/docs
 | `/api/rules/{id}` | `DELETE` | Delete custom security rule |
 
 "# Email-Spam-Ham-Classification" 
+<img width="1160" height="881" alt="image" src="https://github.com/user-attachments/assets/70e0e9fd-a276-4a62-8d94-f892d267f3e9" />
+
+
