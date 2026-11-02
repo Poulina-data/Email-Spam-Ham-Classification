@@ -1,31 +1,31 @@
-# 🛡️ AegisMail AI — Enterprise Email Spam & Threat Defense System
+#  AegisMail AI Enterprise Email Spam & Threat Defense System
 
 **AegisMail AI** is a senior-grade, full-stack NLP web application built to detect, classify, and isolate malicious email spam and phishing threats in real time. Powered by **Multinomial Naive Bayes**, **spaCy** morphological lemmatization, and **n-gram feature extraction**, the system delivers **98.2% accuracy** on unseen test data with full explainable feature attribution (log likelihood ratios).
 
 ---
 
-## 🌟 Key Features
+##  Key Features
 
-1. **⚡ Live Email Threat Scanner & Explainable AI**:
+1. ** Live Email Threat Scanner & Explainable AI**:
    - Real-time classification into **Clean (Ham)**, **Suspicious**, or **Critical Spam**.
    - Instant 1-click test presets (*PayPal Phishing Alert*, *Lottery Scam*, *Office 365 Credential Harvester*, *Corporate Sprint Meeting*, *Amazon Order Confirmation*).
    - **Explainable Feature Attribution**: Inspects exact tokens/n-grams (e.g. `claim`, `prize`, `award`, `urgent`, `guarantee`) that influenced the Naive Bayes posterior decision via log likelihood ratios ($\log P(w|\text{spam}) - \log P(w|\text{ham})$).
    - **Heuristic Threat Engine**: Automatically flags psychological urgency, credential harvesting patterns, suspicious high-risk TLDs (`.xyz`, `.biz`, `.top`), and brand spoofing.
    - Dual animated probability bars and dynamic risk badges.
 
-2. **📦 Quarantine Vault & Incident Management**:
+2. ** Quarantine Vault & Incident Management**:
    - Automated isolation of malicious threats into SQLite (`data/emails.db`) and persistent CSV archive (`data/quarantine/quarantine.csv`).
    - Real-time search by sender, subject, or message keyword.
    - Filter by active quarantine vs released items.
    - Incident Inspector modal with sanitized previews and header analytics.
    - 1-click **Release to Inbox** and **Export to CSV**.
 
-3. **📊 Batch Email Threat Scanner**:
+3. ** Batch Email Threat Scanner**:
    - Upload `.csv` or `.txt` datasets, or paste hundreds of emails directly.
    - Multi-threaded processing with animated progress tracking.
    - Executive batch summary metrics: *Total Audited*, *Spam Blocked*, *Clean Verified*, and *Threat Rate %*.
 
-4. **🧬 Model Architecture & 8-Stage Pipeline Explorer**:
+4. ** Model Architecture & 8-Stage Pipeline Explorer**:
    - Interactive visual walkthrough detailing each stage of model development:
      - **Stage 1**: Data Ingestion (`data/raw/email_spam_dataset.csv`, 5,572 samples).
      - **Stage 2**: NLP Lemmatization & Regex Cleaning (`src/data/preprocess.py`, spaCy `en_core_web_sm`).
@@ -38,17 +38,17 @@
    - Interactive Confusion Matrix widget (134 True Positives, 961 True Negatives, 5 False Positives, 15 False Negatives).
    - Top discriminative vocabulary n-gram clouds for spam vs ham.
 
-5. **📈 Executive Threat Analytics & KPIs**:
+5. ** Executive Threat Analytics & KPIs**:
    - Real-time KPIs: *Total Emails Audited*, *Spam Threats Blocked*, *Clean Inflow Verified*, *Detection Rate %*.
    - Dynamic **Chart.js** visualizations: Threat Distribution Doughnut Chart & Top Trigger Keywords Bar Chart.
 
-6. **⚙️ Security Sandbox & Custom Rules Engine**:
+6. ** Security Sandbox & Custom Rules Engine**:
    - Live sensitivity threshold slider (Aggressive $\leftrightarrow$ Balanced $\leftrightarrow$ Conservative).
    - Custom whitelist / blacklist rule builder (domains, senders, custom keyword triggers).
 
 ---
 
-## 🔬 Model Performance & Validation
+## Model Performance & Validation
 
 Evaluated on 1,115 test samples (80/20 stratified split from 5,572 emails):
 
@@ -71,7 +71,7 @@ Actual Ham                 5 (False Positive) 961
 
 ---
 
-## 🚀 How to Run Locally
+## How to Run Locally
 
 ### 1. Launch the Server
 From the project root:
@@ -95,7 +95,7 @@ http://127.0.0.1:8000/docs
 
 ---
 
-## 📡 REST API Reference
+## REST API Reference
 
 | Endpoint | Method | Description |
 | :--- | :--- | :--- |
